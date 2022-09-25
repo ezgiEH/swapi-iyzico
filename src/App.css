@@ -1,24 +1,12 @@
 .App {
   text-align: center; 
-  background-color: #282c34;
+  width: 100%;
+  background-position: center;
+  background-image: url(../public/assets/home-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/*---------SWAPI----------- */
-/* 1. NAV */
-
-
-
-
-/*-----------NAV-------------*/
-.Nav { 
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-bottom: solid 1px #000;
-  background-color: #ffe81f;
+.starjedi{
+  font-family: 'Poller One', cursive;
 }
-.Nav a {
-  text-decoration: none;
-}
-
-/*-----------NAV-------------*/
