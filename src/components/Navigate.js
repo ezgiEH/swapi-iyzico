@@ -9,6 +9,7 @@ import Starships from '../pages/starships';
 import Contact from '../pages/contact';
 import Error from '../pages/error';
 import StarshipsDetail from '../pages/starshipsDetail';
+import Search from './search';
 import {
   Box,
   Flex,
@@ -19,10 +20,10 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
-  Heading, 
+  Heading,
+  Text, 
 } from '@chakra-ui/react'
-
-import Search from './search';
+import { FaArrowRight} from 'react-icons/fa'
 
 
 function Navbar() {
@@ -45,14 +46,15 @@ function Navbar() {
               <Box>
                 <Link to="/">
                   <Image
-                    height={36}
+                    p={2}
+                    height={24}
                     objectFit="contain"
                     src="../assets/swlogo.png"
                     alt="Swapi"
                   />
                 </Link>
               </Box>
-            <HStack
+            <HStack 
               as={'nav'}
               spacing={20}
               display={{ base: 'none', md: 'flex' }}>
@@ -95,18 +97,27 @@ function Navbar() {
                     <Link to="/search">Search</Link>
                   </Box>
             </HStack>
-          
           </HStack>
         </HStack>
-          <Flex alignItems={'center'}>
+          <Flex alignItems={'center'} >
             <Menu>
-              <a href="https://github.com/ezgiEH">
-                <Image px={2} height={8} src={'/assets/github-logo.png' }></Image>
-              </a>
-              <a href="https://www.linkedin.com/in/ezgihocaoglu/">
-                <Image px={2} height={8} src={'/assets/linkedin.png' }></Image>
-              </a>
+              <Box display={{ base: 'none', md: 'flex' }} >
+                <FaArrowRight />
+                  <Text
+                    fontSize={'lg'}
+                    color={'black'}
+                    position={'absolute'}
+                    right={'85px'}
+                    top={'15px'}
+                    transform={'rotate(-10deg)'}
+                    _hover={{
+                      bg: '#fa6e0a',
+                    }}>
+                    Contact Me
+                  </Text>
+              </Box>
               <Link to="/contact"><Avatar
+                  m={4}
                   size={'md'}
                   src={
                     'https://avatars.githubusercontent.com/u/20560655?v=4'
@@ -157,7 +168,7 @@ function Navbar() {
                   <Box >
                     <Link to="/search">Search</Link>
                   </Box>
-            </HStack>
+              </HStack>
             </Stack> 
           </Box>
         ) : null}

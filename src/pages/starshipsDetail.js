@@ -38,10 +38,10 @@ function StarshipDetail() {
     <div className='App'>
       {isLoading ? <Spinner aligm={'center'} m={10} size='xl' /> :
         <Container 
+        bgGradient={'linear(to-l, blackAlpha.800, transparent)'}
           maxW={'full'}
           px={10}>
           <Stack
-
             align={'center'}
             spacing={{ base: 8, md: 10 }}
             py={{ base: 20, md: 28 }}
