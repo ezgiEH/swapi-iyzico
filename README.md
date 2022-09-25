@@ -68,6 +68,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
         |-- Navigate.js
         |-- search.js
     |-- pages/
+        |-- contact.js
         |-- error.js
         |-- home.js
         |-- starships.js
