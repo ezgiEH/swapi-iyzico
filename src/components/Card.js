@@ -45,6 +45,7 @@ function Card({ starships }) {
                                 },
                             }}>
                             <Image 
+                                h={'300px'}
                                 rounded={'lg'}
                                 maxW={'240px'}
                                 objectFit={'contain'}
@@ -60,21 +61,7 @@ function Card({ starships }) {
                             </Heading>
                             <br />
                             <Stack direction={'row'} align={'center'} >
-                                <Button
-                                    flex={1}
-                                    fontSize={'sm'}
-                                    rounded={'full'}
-                                    bg={'#fa6e0a'}
-                                    color={'white'}
-                                    boxShadow={
-                                        '0px 1px 25px -5px rgb(255 191 69 / 48%), 0 10px 10px -5px rgb(250 110 10 / 43%)'
-                                    }
-                                    _hover={{
-                                        bg: '#f03d14',
-                                    }}
-                                    _focus={{
-                                        bg: '#f03d14',
-                                    }}>
+                                <Button className='css-127g87k'>
                                     View Details                                   
                                 </Button>
                             </Stack>

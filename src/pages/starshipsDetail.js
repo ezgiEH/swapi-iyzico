@@ -1,19 +1,8 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
-import {
-  Container,
-  Stack,
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Button,
-  Image,
-  Divider,
-  Spinner
-} from '@chakra-ui/react';
 import FetchStarship from '../api/FetchStarship';
 import FetchFilms from '../api/FetchFilms';
+import {Container, Stack, Flex, Box, Heading, Text, Button, Image, Divider, Spinner} from '@chakra-ui/react';
 
 
 function StarshipDetail() {
@@ -21,7 +10,6 @@ function StarshipDetail() {
   const { id } = useParams()
   const { isLoading, starship} = FetchStarship(id);
   const { films } = FetchFilms();
-
 
   const allFilms = starship.films?.map((film) => {
     film = film.split('/')[film.split('/').length - 2];
@@ -34,7 +22,7 @@ function StarshipDetail() {
     <div className='App'>
       {isLoading ? <Spinner aligm={'center'} m={10} size='xl' color='white'/> :
         <Container 
-        bgGradient={'linear(to-l, blackAlpha.800, transparent)'}
+          bgGradient={'linear(to-l, blackAlpha.800, transparent)'}
           maxW={'full'}
           px={10}>
           <Stack
@@ -49,28 +37,7 @@ function StarshipDetail() {
                 position={'relative'}
                 w={'full'}
                 zIndex={1}>
-              <Box
-                  rounded={'lg'}
-                  mt={-12}
-                  pos={'relative'}
-                  height={'220px'}
-                  _after={{
-                    transition: 'all .3s ease',
-                    content: '""',
-                    w: 'full',
-                    h: 'full',
-                    pos: 'absolute',
-                    top: 15,
-                    left: 0,
-                    backgroundImage: `url('/assets/ships/${id}.png')`,
-                    filter: 'blur(15px)',
-                    zIndex: -1,
-                  }}
-                  _groupHover={{
-                    _after: {
-                      filter: 'blur(20px)',
-                    },
-                  }}>
+              <Box>
                 <Image
                   rounded={'lg'}
                   objectFit={'contain'}
@@ -78,7 +45,7 @@ function StarshipDetail() {
                 />
               </Box>
             </Flex>
-            <Stack p={10} flex={1}  spacing={{ base: 5, md: 10 }}  
+          <Stack p={10} flex={1}  spacing={{ base: 5, md: 10 }}  
             backdropFilter={'blur(20px)'} rounded={'2xl'} boxShadow={
                       '0px 1px 25px -5px rgb(255 191 69 / 48%), 0 10px 10px -5px rgb(250 110 10 / 43%)'}>
               <Heading
@@ -93,7 +60,7 @@ function StarshipDetail() {
                     _after={{
                       content: "''",
                       width: 'full',
-                      height: '30%',
+                      height: '25%',
                       position: 'absolute',
                       bottom: 1,
                       left: 0,
@@ -107,7 +74,7 @@ function StarshipDetail() {
                   Model: {starship.model}
                 </Text>
               </Heading>
-                <Text color={'white'} align={'center'} lineHeight={2}>
+                <Text color={'white'} align={'center'} lineHeight={2} >
                   <b>Manufacturer:</b> {starship.manufacturer}
                   <Divider />
                   <b>Cost in Credits:</b> {starship.cost_in_credits}
@@ -131,27 +98,12 @@ function StarshipDetail() {
                   <b>Consumables:</b> {starship.consumables}
                   <Divider />
                   <b>Films:</b> {results.map((film, key) => {
-                  return <p key={key}>{film.title}, </p> })}
+                  return <Text key={key}>{film.title}, </Text> })}
                   <Divider />
                 </Text>
               <Stack direction={'row'} justifyContent={'center'} p={2}>
                 <Link to={'/starships/'}>
-                  <Button
-                    maxW={'200px'}
-                    flex={1}
-                    fontSize={'sm'}
-                    rounded={'full'}
-                    bg={'#fa6e0a'}
-                    color={'white'}
-                    boxShadow={
-                      '0px 1px 25px -5px rgb(255 191 69 / 48%), 0 10px 10px -5px rgb(250 110 10 / 43%)'
-                    }
-                    _hover={{
-                      bg: '#f03d14',
-                    }}
-                    _focus={{
-                      bg: '#f03d14',
-                    }}>
+                  <Button className='css-127g87k'>
                     BACK TO SHIPS
                  </Button>
                 </Link>
@@ -165,7 +117,7 @@ function StarshipDetail() {
                   </Button>
                 </Link>
               </Stack>
-            </Stack>
+          </Stack>
           </Stack>
         </Container>
       }

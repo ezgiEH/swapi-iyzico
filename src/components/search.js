@@ -7,6 +7,7 @@ function Search() {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+
     const page = [1, 2, 3, 4];
     const allStarships = [];
 
@@ -14,6 +15,10 @@ function Search() {
         const { starships } = FetchStarships(page);
         allStarships.push(...starships);
     });
+
+    function getId(url) {
+        return url.split('/')[url.split('/').length - 2]
+    }
 
     const handleChange = event => {
         setSearchTerm(event.target.value);
@@ -26,9 +31,7 @@ function Search() {
         { searchTerm.length > 0 ? (setSearchResults(results)) : (setSearchResults([])) }
     }, [searchTerm]);
 
-    function getId(url) {
-        return url.split('/')[url.split('/').length - 2]
-    }
+    
 
     return (
         <div className='App' >
@@ -43,28 +46,14 @@ function Search() {
                     value={searchTerm}
                     onChange={handleChange}
                 />
-                <SimpleGrid minChildWidth='140px' spacing='60px'>
+                <SimpleGrid minChildWidth='160px' spacing='60px'>
                     {searchResults.map(item => (
                         <List>
                             <ListItem m={3}>
                                 <Link to={`/starships/${getId(item.url)}`}>
-                                    <Button
+                                    <Button className='css-127g87k' 
                                         key={item.name}
-                                        maxW={'200px'}
-                                        flex={1}
-                                        fontSize={'sm'}
-                                        rounded={'full'}
-                                        bg={'#fa6e0a'}
-                                        color={'white'}
-                                        boxShadow={
-                                            '0px 1px 25px -5px rgb(255 191 69 / 48%), 0 10px 10px -5px rgb(250 110 10 / 43%)'
-                                        }
-                                        _hover={{
-                                            bg: '#f03d14',
-                                        }}
-                                        _focus={{
-                                            bg: '#f03d14',
-                                        }}>
+                                        >
                                         {item.name}
                                     </Button>
                                 </Link>

@@ -1,12 +1,91 @@
 .App {
   text-align: center; 
   width: 100%;
+  height: 100%;
   background-position: center;
   background-image: url(../public/assets/home-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+/*----------Custom Font----------*/
 .starjedi{
   font-family: 'Poller One', cursive;
 }
+/*----------Custom Font----------*/
+
+
+/*----------Custom Nav Button----------*/
+.css-vsam2o {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: var(--chakra-space-2);
+  font-size: var(--chakra-fontSizes-lg);
+  border-radius: var(--chakra-radii-full);
+  background: #fa6e0a;
+  color: var(--chakra-colors-white);
+  box-shadow: 0px 1px 25px -5pxrgb(255 191 69 / 48%),0 10px 10px -5pxrgb(250 110 10 / 43%);
+}
+/*----------Custom Nav Button----------*/
+
+
+
+
+/*----------Custom Detail Button----------*/
+.css-127g87k {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  line-height: 1.2;
+  border-radius: var(--chakra-radii-full);
+  font-weight: var(--chakra-fontWeights-semibold);
+  transition-property: var(--chakra-transition-property-common);
+  transition-duration: var(--chakra-transition-duration-normal);
+  height: var(--chakra-sizes-10);
+  min-width: var(--chakra-sizes-10);
+  font-size: var(--chakra-fontSizes-sm);
+  -webkit-padding-start: var(--chakra-space-4);
+  padding-inline-start: var(--chakra-space-4);
+  -webkit-padding-end: var(--chakra-space-4);
+  padding-inline-end: var(--chakra-space-4);
+  background: #fa6e0a;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: var(--chakra-colors-white);
+  box-shadow: 0px 1px 25px -5pxrgb(255 191 69 / 48%),0 10px 10px -5pxrgb(250 110 10 / 43%);
+}
+/*----------Custom Detail Button----------*/
+
+

@@ -1,15 +1,6 @@
 import React from 'react'
 import { FaGithub, FaLinkedinIn, FaArrowLeft } from 'react-icons/fa'
-import {
-  Container,
-  Stack,
-  Text,
-  Button,
-  Heading,
-  Box,
-  Link
-} from '@chakra-ui/react'
-
+import {Container, Stack, Text, Button, Heading, Box, Link} from '@chakra-ui/react'
 
 
 function Contact() {
@@ -27,9 +18,9 @@ function Contact() {
             fontWeight={600}
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
-            Thank you! <Text as={'span'} color={'#fa6e0a'}>
-              iyzico family
-            </Text> for allowing me to live the <br />
+            Thank you <Text as={'span'} color={'#fa6e0a'}>
+              iyzico family!
+            </Text><br /> For allowing me to live the <br />
             Practicum experience with you!
           </Heading>
           <Text color={'gray.100'}>
