@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 const FetchStarship = (id) => {
     const [isLoading, setIsLoading] = useState(false);
     const [starship, setStarship] = useState([]);
+
     useEffect(() => {
         const getData = async () => {
             const { data } = await axios.get(
@@ -12,6 +13,7 @@ const FetchStarship = (id) => {
             setStarship(data);
             setIsLoading(false);
         };
+        
         getData();
         setIsLoading(true);
     }, [id]);

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub, FaLinkedinIn , FaArrowLeft} from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaArrowLeft } from 'react-icons/fa'
 import {
   Container,
   Stack,
@@ -15,7 +15,7 @@ import {
 function Contact() {
   return (
     <div className='App'>
-      <Container maxW={'5xl'} h={'100vh'} >
+      <Container maxW={'5xl'} h={'auto'} p={20} >
         <Stack
           backdropFilter={'blur(10px)'}
           as={Box}
@@ -28,15 +28,15 @@ function Contact() {
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
             Thank you! <Text as={'span'} color={'#fa6e0a'}>
-            iyzico family
+              iyzico family
             </Text> for allowing me to live the <br />
             Practicum experience with you!
           </Heading>
           <Text color={'gray.100'}>
-          I'm Ezgi Hocaoglu. I am a computer engineer 
-          eager to learn new knowledge in the field of web development. 
-          I am very happy to develop projects with you and to feel like
-           part of your family, even if not yet.
+            I'm Ezgi Hocaoglu. I am a computer engineer
+            eager to learn new knowledge in the field of web development.
+            I am very happy to develop projects with you and to feel like
+            part of your family, even if not yet.
           </Text>
           <Stack
             direction={'row'}
@@ -55,7 +55,7 @@ function Contact() {
                 <FaGithub />
               </Button>
             </Link>
-            <Link href='https://www.linkedin.com/in/ezgihocaoglu/'  target={'_blank'}>
+            <Link href='https://www.linkedin.com/in/ezgihocaoglu/' target={'_blank'}>
               <Button
                 bg={'blue.500'}
                 rounded={'full'}

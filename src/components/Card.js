@@ -26,7 +26,7 @@ function Card({ starships }) {
                             rounded={'lg'}
                             mt={-12}
                             pos={'relative'}
-                            height={'230px'}
+                            height={'180px'}
                             _after={{
                                 transition: 'all .3s ease',
                                 content: '""',
@@ -36,27 +36,26 @@ function Card({ starships }) {
                                 top: 15,
                                 left: 0,
                                 backgroundImage: `url('/assets/ships/${id}.png')`,
-                                filter: 'blur(15px)',
+                                filter: 'blur(25px)',
                                 zIndex: -1,
                             }}
                             _groupHover={{
                                 _after: {
-                                    filter: 'blur(20px)',
+                                    filter: 'blur(40px)',
                                 },
                             }}>
                             <Image 
                                 rounded={'lg'}
-                                maxW={'230px'}
+                                maxW={'240px'}
                                 objectFit={'contain'}
                                 src={`/assets/ships/${id}.png`}
                             />
                         </Box>
-                        <Stack pt={10} align={'center'} height={200} >
-                            
+                        <Stack mt={10} align={'center'} h={200} justify={'end'}>
                             <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
                                 MODEL
                             </Text>
-                            <Heading color={'gray.800'} fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+                            <Heading color={'gray.800'} fontSize={'2xl'} fontFamily={'Poller One'} fontWeight={500}>
                                 {starships.name}
                             </Heading>
                             <br />

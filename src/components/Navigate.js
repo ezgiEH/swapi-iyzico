@@ -9,7 +9,7 @@ import Starships from '../pages/starships';
 import Contact from '../pages/contact';
 import Error from '../pages/error';
 import StarshipsDetail from '../pages/starshipsDetail';
-import Search from './search';
+import Search from './Search';
 import {
   Box,
   Flex,
@@ -94,7 +94,7 @@ function Navbar() {
                       bg: '#f03d14',
                     }}>
                   <Box >
-                    <Link to="/search">Search</Link>
+                    <Link to="/Search">Search</Link>
                   </Box>
             </HStack>
           </HStack>
@@ -129,7 +129,7 @@ function Navbar() {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
+          <Box p={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               <HStack 
                 p={2}
@@ -166,7 +166,7 @@ function Navbar() {
                       bg: '#f03d14',
                     }}>
                   <Box >
-                    <Link to="/search">Search</Link>
+                    <Link to="/Search">Search</Link>
                   </Box>
               </HStack>
             </Stack> 

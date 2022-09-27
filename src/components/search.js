@@ -7,7 +7,6 @@ function Search() {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
-
     const page = [1, 2, 3, 4];
     const allStarships = [];
 
@@ -20,7 +19,6 @@ function Search() {
         setSearchTerm(event.target.value);
     };
 
-
     useEffect(() => {
         const results = allStarships.filter(starship =>
             starship.name.toLowerCase().includes(searchTerm)
@@ -28,16 +26,14 @@ function Search() {
         { searchTerm.length > 0 ? (setSearchResults(results)) : (setSearchResults([])) }
     }, [searchTerm]);
 
-
     function getId(url) {
         return url.split('/')[url.split('/').length - 2]
     }
 
-
     return (
         <div className='App' >
-            <Container maxW='container.lg' h={'100vh'}>
-                <Heading fontSize={60} p={30}>Search Starships</Heading>
+            <Container p={10} maxW='container.lg' h={'100vh'}>
+                <Heading fontSize={40} p={30} fontFamily={'Poller One'}>Search Starships</Heading>
                 <Input
                     backdropFilter={'blur(20px)'}
                     mb={10}
