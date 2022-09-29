@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Card({ starships }) {
     
+    // Get the id from the url
     function getId(url) {
         return url.split('/')[url.split('/').length - 2]
     }

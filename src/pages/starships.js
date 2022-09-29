@@ -7,6 +7,7 @@ import FetchStarships from '../api/FetchStarships';
 
 
 function Starships() {
+  // Get the starships data
   const [page, setPage] = useState(1);
   const { isLoading, starships } = FetchStarships(page);
 

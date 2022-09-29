@@ -6,21 +6,24 @@ import {Container, Stack, Flex, Box, Heading, Text, Button, Image, Divider, Spin
 
 
 function StarshipDetail() {
-  
+  // Get the id from the url
   const { id } = useParams()
+  // Get the starship data
   const { isLoading, starship} = FetchStarship(id);
+  // Get the films data
   const { films } = FetchFilms();
 
+  // get films id from starship
   const allFilms = starship.films?.map((film) => {
     film = film.split('/')[film.split('/').length - 2];
     return film;
   });
-
+  // get films
   const results = films.filter(film => allFilms.includes(film.episode_id.toString()));
-
+  
   return (
     <div className='App'>
-      {isLoading ? <Spinner aligm={'center'} m={10} size='xl' color='white'/> :
+      {isLoading ? <Spinner align={'center'} m={10} size='xl' color='white'/> :
         <Container 
           bgGradient={'linear(to-l, blackAlpha.800, transparent)'}
           maxW={'full'}

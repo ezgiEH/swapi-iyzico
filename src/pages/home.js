@@ -25,6 +25,7 @@ function Home() {
       <VStack
         w={'full'}
         justify={'center'}
+        align={'center'}
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={'linear(to-l, blackAlpha.800, transparent)'}>
         <Stack maxW={'2xl'} align={'flex-start'} spacing={6} >

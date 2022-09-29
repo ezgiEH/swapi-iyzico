@@ -4,18 +4,19 @@ import { Link } from 'react-router-dom'
 import FetchStarships from '../api/FetchStarships';
 
 function Search() {
-
+  
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
-
+    
     const page = [1, 2, 3, 4];
     const allStarships = [];
-
+    
+    // Get all starships
     page.forEach(async (page) => {
         const { starships } = FetchStarships(page);
         allStarships.push(...starships);
     });
-
+ 
     function getId(url) {
         return url.split('/')[url.split('/').length - 2]
     }
@@ -23,7 +24,8 @@ function Search() {
     const handleChange = event => {
         setSearchTerm(event.target.value);
     };
-
+    
+    // Search starships
     useEffect(() => {
         const results = allStarships.filter(starship =>
             starship.name.toLowerCase().includes(searchTerm) 
