@@ -48,7 +48,7 @@ function StarshipDetail() {
                 />
               </Box>
             </Flex>
-          <Stack p={10} flex={1}  spacing={{ base: 5, md: 10 }}  
+          <Stack p={10} flex={1} spacing={{ base: 5, md: 10 }}  
             backdropFilter={'blur(20px)'} rounded={'2xl'} boxShadow={
                       '0px 1px 25px -5px rgb(255 191 69 / 48%), 0 10px 10px -5px rgb(250 110 10 / 43%)'}>
               <Heading

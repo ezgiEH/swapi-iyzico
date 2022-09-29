@@ -25,7 +25,7 @@ function Search() {
         setSearchTerm(event.target.value);
     };
     
-    // Search starships
+    // Search starships name and model
     useEffect(() => {
         const results = allStarships.filter(starship =>
             starship.name.toLowerCase().includes(searchTerm) 
